@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Wordle game colors
+        correct: "hsl(var(--correct))",
+        "wrong-position": "hsl(var(--wrong-position))",
+        "not-in-word": "hsl(var(--not-in-word))",
+        empty: "hsl(var(--empty))",
+        "tile-border": "hsl(var(--tile-border))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +86,27 @@ export default {
             height: "0",
           },
         },
+        "flip-tile": {
+          "0%": { transform: "rotateX(0deg)" },
+          "50%": { transform: "rotateX(90deg)" },
+          "100%": { transform: "rotateX(0deg)" },
+        },
+        "bounce-tile": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+        },
+        "shake-row": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-5px)" },
+          "75%": { transform: "translateX(5px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "flip-tile": "flip-tile 0.6s ease-in-out",
+        "bounce-tile": "bounce-tile 0.3s ease-in-out",
+        "shake-row": "shake-row 0.5s ease-in-out",
       },
     },
   },
